@@ -1,4 +1,5 @@
 import org.sql2o.*;
+import java.util.List;
 
 public class Stylist {
   private String name;
@@ -16,10 +17,16 @@ public class Stylist {
   public Stylist(String name){
     this.name = name;  
   }
-  public String getName(){
+  public String getName(){ // TEST THIS
     return name;
   }
-  public int getId(){
+  public int getId(){ // TEST THIS
     return id;
+  }
+  public static List<Stylist> all() {
+    String sql = "SELECT id, name FROM stylists";
+    try (Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql).executeAndFetch(Stylist.class);
+    }
   }
 }

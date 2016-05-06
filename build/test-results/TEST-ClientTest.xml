@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-06T04:56:20" hostname="Liams-Air.hsd1.or.comcast.net" time="0.466">
+<testsuite name="ClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-06T05:13:33" hostname="Liams-Air.hsd1.or.comcast.net" time="0.471">
   <properties/>
-  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.451"/>
-  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.015"/>
+  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.459"/>
+  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.011"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
