@@ -10,20 +10,20 @@ public class ClientTest {
 
 	@Test
 	public void clientsAreTheSame() {
-		Client client1 = new Client("Bill");
-		Client client2 = new Client("Bill");
+		Client client1 = new Client("Bill", 1);
+		Client client2 = new Client("Bill", 1);
 		assertTrue(client1.equals(client2));
 	}
 
 	@Test
 	public void client_checkInstantiatesCorrectly_True() {
-		Client newClient = new Client("Bill");
+		Client newClient = new Client("Bill", 1);
 		assertEquals(true, newClient instanceof Client);
 	}
 
 	@Test
 	public void getName_returnsObjectName_String() {
-		Client newClient = new Client("Jason");
+		Client newClient = new Client("Jason", 1);
 		assertEquals("Jason", newClient.getName());
 	}
 
@@ -33,19 +33,27 @@ public class ClientTest {
   }
 	@Test
 	public void save_assignsIdToObject() {
-		Client myClient = new Client("John");
+		Client myClient = new Client("John", 1);
 		myClient.save();
 		Client savedClient = Client.all().get(0);
 		assertEquals(myClient.getId(), savedClient.getId());
 	}
+	@Test
+  	public void save_savesStylistIdIntoDB_true() {
+	    Stylist myStylist = new Stylist("Monica");
+	    myStylist.save();
+	    Client myClient = new Client("Mike", myStylist.getId());
+	    myClient.save();
+	    Client savedClient = Client.find(myClient.getId());
+	    assertEquals(savedClient.getStylistId(), myStylist.getId());
+  	}
 
 	@Test
 	public void find_findsClientInDatabase_true() {
-		Client myClient = new Client("Mary");
+		Client myClient = new Client("Mary", 1);
 		myClient.save();
 		Client savedClient = Client.find(myClient.getId());
 		assertTrue(myClient.equals(savedClient));
 	}
-
 	
 }
