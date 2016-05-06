@@ -29,7 +29,7 @@ public class ClientTest {
 
 	@Test
 	public void all_emptyAtFirst() {
-		assertEquals(Stylist.all().size(), 0);
+		assertEquals(Client.all().size(), 0);
   }
 	@Test
 	public void save_assignsIdToObject() {
@@ -37,6 +37,14 @@ public class ClientTest {
 		myClient.save();
 		Client savedClient = Client.all().get(0);
 		assertEquals(myClient.getId(), savedClient.getId());
+	}
+
+	@Test
+	public void find_findsClientInDatabase_true() {
+		Client myClient = new Client("Mary");
+		myClient.save();
+		Client savedClient = Client.find(myClient.getId());
+		assertTrue(myClient.equals(savedClient));
 	}
 
 	

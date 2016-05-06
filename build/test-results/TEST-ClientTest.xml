@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-05-06T16:33:19" hostname="Liams-MacBook-Air.local" time="0.804">
+<testsuite name="ClientTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-05-06T17:02:15" hostname="Liams-MacBook-Air.local" time="0.638">
   <properties/>
-  <testcase name="getName_returnsObjectName_String" classname="ClientTest" time="0.497"/>
-  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.165"/>
-  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.029"/>
-  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.085"/>
-  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.025"/>
+  <testcase name="find_findsClientInDatabase_true" classname="ClientTest" time="0.527"/>
+  <testcase name="getName_returnsObjectName_String" classname="ClientTest" time="0.013"/>
+  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.025"/>
+  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.014"/>
+  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.044"/>
+  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
