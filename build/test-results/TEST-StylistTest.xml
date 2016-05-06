@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StylistTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-05-06T05:13:33" hostname="Liams-Air.hsd1.or.comcast.net" time="0.138">
+<testsuite name="StylistTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-05-06T15:42:47" hostname="Liams-MacBook-Air.local" time="0.141">
   <properties/>
-  <testcase name="Stylist_objectInstantiatesCorrectly_Sarah" classname="StylistTest" time="0.016"/>
-  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.111"/>
-  <testcase name="stylistsAreTheSame_True" classname="StylistTest" time="0.01"/>
+  <testcase name="Stylist_objectInstantiatesCorrectly_Sarah" classname="StylistTest" time="0.011"/>
+  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.118"/>
+  <testcase name="stylistsAreTheSame_True" classname="StylistTest" time="0.011"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
