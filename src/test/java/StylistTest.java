@@ -22,6 +22,12 @@ public class StylistTest {
 	}
 
 	@Test
+	public void getName_returnsObjectName_String() {
+		Stylist newStylist = new Stylist("Bruno");
+		assertEquals("Bruno", newStylist.getName());
+	}
+
+	@Test
 	public void all_emptyAtFirst() {
 		assertEquals(Stylist.all().size(), 0);
   }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-06T15:42:46" hostname="Liams-MacBook-Air.local" time="0.438">
+<testsuite name="ClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-06T15:58:02" hostname="Liams-MacBook-Air.local" time="0.418">
   <properties/>
-  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.424"/>
-  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.014"/>
+  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.387"/>
+  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.024"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
