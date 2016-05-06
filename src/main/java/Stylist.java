@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Stylist {
   private String name;
+  private int client_id;
   private int id;
 
   @Override
@@ -14,6 +15,8 @@ public class Stylist {
       return this.getName().equals(newStylist.getName());
     } 
   }
+
+  
   public Stylist(String name){
     this.name = name;  
   }
@@ -24,7 +27,7 @@ public class Stylist {
     return id;
   }
   public static List<Stylist> all() {
-    String sql = "SELECT id, name FROM stylists";
+    String sql = "SELECT id, name, client_id FROM stylists";
     try (Connection con = DB.sql2o.open()) {
       return con.createQuery(sql).executeAndFetch(Stylist.class);
     }

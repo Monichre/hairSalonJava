@@ -1,8 +1,10 @@
 import org.sql2o.*;
+import java.util.List;
 
 public class Client {
   
   private String name;
+  private int stylist_id;
   private int id;
 
   @Override
@@ -24,6 +26,21 @@ public class Client {
   }
   public int getId(){
   	return id;
+  }
+  public static List<Client> all() {
+    String sql = "SELECT id, name, stylist_id FROM clients";
+    try (Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql).executeAndFetch(Client.class);
+    }
+  }
+   public void save() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO clients(name) VALUES (:name)";
+      this.id = (int) con.createQuery(sql, true)
+        .addParameter("name", this.name)
+        .executeUpdate()
+        .getKey();
+    }
   }
 
 }

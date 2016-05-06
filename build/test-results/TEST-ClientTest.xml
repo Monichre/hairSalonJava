@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-06T15:58:02" hostname="Liams-MacBook-Air.local" time="0.418">
+<testsuite name="ClientTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-05-06T16:23:44" hostname="Liams-MacBook-Air.local" time="0.893">
   <properties/>
-  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.387"/>
-  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.024"/>
+  <testcase name="getName_returnsObjectName_String" classname="ClientTest" time="0.524"/>
+  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.182"/>
+  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.031"/>
+  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.123"/>
+  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

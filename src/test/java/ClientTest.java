@@ -20,4 +20,24 @@ public class ClientTest {
 		Client newClient = new Client("Bill");
 		assertEquals(true, newClient instanceof Client);
 	}
+
+	@Test
+	public void getName_returnsObjectName_String() {
+		Client newClient = new Client("Jason");
+		assertEquals("Jason", newClient.getName());
+	}
+
+	@Test
+	public void all_emptyAtFirst() {
+		assertEquals(Stylist.all().size(), 0);
+  }
+	@Test
+	public void save_assignsIdToObject() {
+		Client myClient = new Client("Mow the lawn");
+		myClient.save();
+		Client savedClient = Client.all().get(0);
+		assertEquals(myClient.getId(), savedClient.getId());
+	}
+
+	
 }
