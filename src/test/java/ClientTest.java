@@ -33,7 +33,7 @@ public class ClientTest {
   }
 	@Test
 	public void save_assignsIdToObject() {
-		Client myClient = new Client("Mow the lawn");
+		Client myClient = new Client("John");
 		myClient.save();
 		Client savedClient = Client.all().get(0);
 		assertEquals(myClient.getId(), savedClient.getId());

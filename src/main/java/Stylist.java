@@ -12,11 +12,12 @@ public class Stylist {
       return false;
     }else {
       Stylist newStylist = (Stylist) otherStylist;
-      return this.getName().equals(newStylist.getName());
+      return this.getName().equals(newStylist.getName()) &&
+      this.getId() == newStylist.getId();
     } 
   }
 
-  
+
   public Stylist(String name){
     this.name = name;  
   }
