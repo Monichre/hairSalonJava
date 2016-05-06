@@ -3,6 +3,11 @@ import static org.junit.Assert.*;
 
 public class AppTest {
 
+	
+	@Rule
+	public DatabaseRule database = new DatabaseRule();
+
+
 	// @Test
 	// public void methodWeAreTesting_behaviorWeAreTesting_expectedResult() {
 	// 	MainClassName testMainClassName = new MainClassName();
