@@ -13,9 +13,11 @@ public class Client {
       return false;
     }else {
       Client newClient = (Client) otherClient;
-      return this.getName().equals(newClient.getName());
+      return this.getName().equals(newClient.getName()) &&
+           this.getId() == newClient.getId();
     } 
   }
+
 
   public Client(String name){
   	this.name = name;
