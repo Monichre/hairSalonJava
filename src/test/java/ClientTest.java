@@ -55,5 +55,16 @@ public class ClientTest {
 		Client savedClient = Client.find(myClient.getId());
 		assertTrue(myClient.equals(savedClient));
 	}
+	// @Test
+	// public void getStylists_returnsStylist_true() {
+	// 	Client myClient = new Client("Beatrice", 1);
+	// 	myClient.save();
+	// 	Stylist myStylist = new Stylist("Marco");
+	// 	myStylist.save();
+		
+		
+	// 	Client[] clients = new Client[] { firstTask, secondTask };
+	// 	assertTrue(myClient.getClients().containsAll(Arrays.asList(clients)));
+	// }
 	
 }

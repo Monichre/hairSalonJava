@@ -31,7 +31,7 @@ public class Client {
       return con.createQuery(sql).executeAndFetch(Client.class);
     }
   }
-  
+
   @Override
   public boolean equals(Object otherClient){
     if(!(otherClient instanceof Client)){
@@ -62,6 +62,15 @@ public class Client {
         .addParameter("id", id)
         .executeAndFetchFirst(Client.class);
       return client;
+    }
+  }
+  
+  public List<Stylist> getStylists() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM stylists where stylist_id=:id";
+      return con.createQuery(sql)
+        .addParameter("id", this.id)
+        .executeAndFetch(Stylist.class);
     }
   }
 

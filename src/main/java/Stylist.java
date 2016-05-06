@@ -45,12 +45,20 @@ import java.util.List;
     }
 
     public static Stylist find(int id) {
+      try(Connection con = DB.sql2o.open()) {
+        String sql = "SELECT * FROM stylists where id=:id";
+        Stylist stylist = con.createQuery(sql)
+          .addParameter("id", id)
+          .executeAndFetchFirst(Stylist.class);
+        return stylist;
+      }
+    }
+   public List<Client> getClients() {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "SELECT * FROM stylists where id=:id";
-      Stylist stylist = con.createQuery(sql)
-        .addParameter("id", id)
-        .executeAndFetchFirst(Stylist.class);
-      return stylist;
+      String sql = "SELECT * FROM clients where stylist_id=:id";
+      return con.createQuery(sql)
+        .addParameter("id", this.id)
+        .executeAndFetch(Client.class);
     }
   }
 }
