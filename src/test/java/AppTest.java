@@ -29,6 +29,12 @@ public class AppTest extends FluentTest {
 		goTo("http://localhost:4567/");
 		assertThat(pageSource()).contains("Avec du Monde");
 	}
+	@Test
+	public void clickBookingsRoute() {
+		goTo("http://localhost:4567/");
+		click("a", withText("See a list of our Stylists"));
+		assertThat(pageSource()).contains("Bookings");
+	}
 
 	@Test
 	public void homeSubmitRendersSuccessVtl() {
@@ -36,6 +42,8 @@ public class AppTest extends FluentTest {
 		fill("#stylistName").with("john");
 		fill("#clientName").with("Jessica");
 		submit(".btn");
-		assertThat(pageSource()).contains("Booked!");	
+		assertThat(pageSource()).contains("Booked!");
+		assertThat(pageSource()).contains("Click here view your booking");
+		assertThat(pageSource()).contains("Home");	
 	}
 }
