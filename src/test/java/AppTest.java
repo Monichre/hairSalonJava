@@ -46,6 +46,17 @@ public class AppTest extends FluentTest {
 		assertThat(pageSource()).contains("Click here view your booking");
 		assertThat(pageSource()).contains("Home");	
 	}
+	@Test
+	public void stylistLinkRendersAddClientVtl() {
+		goTo("http://localhost:4567/");
+		fill("#stylistName").with("john");
+		fill("#clientName").with("Jessica");
+		submit(".btn");
+		assertThat(pageSource()).contains("Click here view your booking");
+		click("a", withText("Click here view your booking"));
+		assertThat(pageSource()).contains("Book an appointment with john");
+		
+	}
 
 	@Test
 	public void allClientsDisplayOnStylistsPage() {
@@ -58,6 +69,14 @@ public class AppTest extends FluentTest {
 		assertThat(pageSource()).contains("Devin");
 		assertThat(pageSource()).contains("Eunice");
 	}
+	// @Test
+	// public void stylistLinkRendersAddClientVtl() {
+	// 	goTo("http://localhost:4567/");
+	// 	click("a", withText("See a list of our Stylists"));
+		
+	// 	click("a", withText("Book an appointment with john"));
+	// 	assertThat(pageSource()).contains("Enter your information below to book with john");
+	// }
 
 		
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StylistTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-05-09T16:53:59" hostname="Liams-MacBook-Air.local" time="0.388">
+<testsuite name="StylistTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-05-09T17:07:13" hostname="Liams-MacBook-Air.local" time="0.161">
   <properties/>
-  <testcase name="getClients_returnsAllClientsFromDatabase_True" classname="StylistTest" time="0.289"/>
-  <testcase name="Stylist_objectInstantiatesCorrectly_Sarah" classname="StylistTest" time="0.013"/>
-  <testcase name="getName_returnsObjectName_String" classname="StylistTest" time="0.009"/>
-  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.024"/>
-  <testcase name="find_findsStylistInDatabase_true" classname="StylistTest" time="0.037"/>
-  <testcase name="stylistsAreTheSame_True" classname="StylistTest" time="0.011"/>
+  <testcase name="getClients_returnsAllClientsFromDatabase_True" classname="StylistTest" time="0.069"/>
+  <testcase name="Stylist_objectInstantiatesCorrectly_Sarah" classname="StylistTest" time="0.01"/>
+  <testcase name="getName_returnsObjectName_String" classname="StylistTest" time="0.01"/>
+  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.022"/>
+  <testcase name="find_findsStylistInDatabase_true" classname="StylistTest" time="0.036"/>
+  <testcase name="stylistsAreTheSame_True" classname="StylistTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
