@@ -45,6 +45,8 @@ public class AppTest extends FluentTest {
 		assertThat(pageSource()).contains("Booked!");
 		assertThat(pageSource()).contains("Click here view your booking");
 		assertThat(pageSource()).contains("Home");	
+		click("a", withText("Home"));
+		assertThat(pageSource()).contains("Avec du Monde");
 	}
 	@Test
 	public void stylistLinkRendersAddClientVtl() {
