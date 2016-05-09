@@ -3,6 +3,7 @@
 	<h2>Enter your information below to book a reservation</h2>
 
 	#if ($stylist)
+	<p>Current Clients include:</p>
 		<ul>
 		#foreach ($client in $stylist.getClients())
 		    <li>$client.getName()</li>
