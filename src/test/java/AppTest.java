@@ -31,12 +31,11 @@ public class AppTest extends FluentTest {
 	}
 
 	@Test
-	public void postsInputToHomeVtl() {
+	public void homeSubmitRendersSuccessVtl() {
 		goTo("http://localhost:4567/");
 		fill("#stylistName").with("john");
 		fill("#clientName").with("Jessica");
 		submit(".btn");
-		assertThat(pageSource()).contains("Booked!");
-		
+		assertThat(pageSource()).contains("Booked!");	
 	}
 }
