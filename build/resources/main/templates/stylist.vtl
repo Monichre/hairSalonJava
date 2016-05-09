@@ -1,16 +1,29 @@
-<div class="stylists">
-  #if ($stylists)
-    #foreach ($stylist in $stylists)
-      <h2>$stylist.getName()</h2>
-    #end
-    #foreach($client in $stylist.getClients())
-        <li>$client.getName()</li>
-      #end
-  #else
-    <p>
-    No clients at this time
-    </p>
-    <button><a href="/">Book an appointment</a></button>
-  #end
+<div class="container">
+	<h1><a href="/addClient/$stylist.getId()"></a>$stylist.getName()</h1>
+
+	#if ($stylist)
+		<ul>
+		#foreach ($client in $stylist.getClients())
+		    <li>$client.getName()</li>
+		#end
+		</ul>
+	#else
+		<h2>Enter your information below to book with $stylist.getName()</h2>
+	#end
+	
+	
+		
+	<form action="/stylistClients/addClient/$stylist.getId()" method="post">
+		<div class="form-group">
+			<label for="addClient">Your Name</label>
+			<input id="addClient" name="addClient" class="form-control" type="text">
+		</div>
+		<button type="submit" class="btn btn-info">Submit</button>
+	</form>
+	
+
+    
+  
+
+	<a href="/">Go Back</a>
 </div>
-<button><a href="/">home</a></button>

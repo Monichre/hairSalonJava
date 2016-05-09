@@ -43,7 +43,6 @@ import java.util.List;
           .getKey();
       }
     }
-
     public static Stylist find(int id) {
       try(Connection con = DB.sql2o.open()) {
         String sql = "SELECT * FROM stylists where id=:id";

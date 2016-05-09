@@ -29,12 +29,30 @@ public class App {
     Client newClient = new Client(clientName, newStylist.getId());
     newClient.save();
     model.put("stylists", stylists);
-    model.put("template", "templates/stylist.vtl");
+    model.put("template", "templates/home.vtl");
       return new ModelAndView(model, layout);
+  }, new VelocityTemplateEngine());
+
+  get("/stylistClients/:id", (request, response) -> {
+    HashMap model = new HashMap();
+    Stylist stylist = Stylist.find(Integer.parseInt(request.params(":id")));
+    model.put("stylist", stylist);
+    model.put("template", "templates/stylist.vtl");
+    return new ModelAndView(model, layout);
+  }, new VelocityTemplateEngine());
+
+  post("/stylistClients/addClient/:id", (request, response) -> {
+    HashMap model = new HashMap();
+    Stylist stylist = Stylist.find(Integer.parseInt(request.params(":id")));
+    String newClientName = request.queryParams("addClient");
+    Client newClient = new Client(newClientName, stylist.getId());
+    newClient.save();
+    model.put("stylist", stylist);
+    model.put("template", "templates/stylist.vtl");
+    return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 
 
 
-
-}
+  }
 }

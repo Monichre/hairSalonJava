@@ -2,20 +2,38 @@
   <h1>Avec du Monde</h1>
   <h2>Please enter your name a stylist to book an Appointment</h2>
 
-  <form action='/booking' method='post'>
-	<div class="form-group">
-		<label for="stylistName">Stylist Name</label>
-		<input id="stylistName" name="stylistName" class="form-control" type="text">
-	</div>
-	<div class="form-group">
-		<label for="clientName">Your Name</label>
-		<input id="clientName" name="clientName" class="form-control" type="text">
-	</div>
-	
+	<form action='/booking' method='post'>
+		<div class="form-group">
+			<label for="stylistName">Stylist Name</label>
+			<input id="stylistName" name="stylistName" class="form-control" type="text">
+		</div>
+		<div class="form-group">
+			<label for="clientName">Your Name</label>
+			<input id="clientName" name="clientName" class="form-control" type="text">
+		</div>
 
-    <button type="submit" class="btn btn-info">Submit</button>
-  </form>
+
+		<button type="submit" class="btn btn-info">Submit</button>
+	</form>
+  	<div class="stylists">
+	  #if ($stylists)
+	    #foreach ($stylist in $stylists)
+		<h2><a href="/stylistClients/$stylist.getId()">Book an appointment with $stylist.getName()</a></h2>
+		<p>Current Clients include:</p>
+	    	#foreach($client in $stylist.getClients())
+	    			<li>$client.getName()</li>
+			#end
+	    #end
+		
+	  #else
+	    <p>
+	    No clients at this time
+	    </p>
+	    
+	  #end
+	</div>
 </div>
+
 
 <div class="Thank you">
 	<p><a href="/booking">Click here to see our stylists and their clients</a></p>
