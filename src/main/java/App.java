@@ -29,7 +29,7 @@ public class App {
     Client newClient = new Client(clientName, newStylist.getId());
     newClient.save();
     model.put("stylists", stylists);
-    model.put("template", "templates/home.vtl");
+    model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 

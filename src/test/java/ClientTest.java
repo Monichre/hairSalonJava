@@ -30,7 +30,8 @@ public class ClientTest {
 	@Test
 	public void all_emptyAtFirst() {
 		assertEquals(Client.all().size(), 0);
-  }
+  	}
+  	
 	@Test
 	public void save_assignsIdToObject() {
 		Client myClient = new Client("John", 1);
