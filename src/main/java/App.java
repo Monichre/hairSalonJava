@@ -33,11 +33,19 @@ public class App {
       return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 
+  get("/booking", (request, response) -> {
+    HashMap<String, Object> model = new HashMap<String, Object>();
+    List<Stylist> stylists = Stylist.all();
+    model.put("stylists", stylists);
+    model.put("template", "templates/stylists.vtl");
+      return new ModelAndView(model, layout);
+  }, new VelocityTemplateEngine());
+
   get("/stylistClients/:id", (request, response) -> {
     HashMap model = new HashMap();
     Stylist stylist = Stylist.find(Integer.parseInt(request.params(":id")));
     model.put("stylist", stylist);
-    model.put("template", "templates/stylist.vtl");
+    model.put("template", "templates/addClient.vtl");
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 
@@ -48,7 +56,7 @@ public class App {
     Client newClient = new Client(newClientName, stylist.getId());
     newClient.save();
     model.put("stylist", stylist);
-    model.put("template", "templates/stylist.vtl");
+    model.put("template", "templates/addClient.vtl");
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 

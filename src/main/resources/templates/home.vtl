@@ -15,26 +15,16 @@
 
 		<button type="submit" class="btn btn-info">Submit</button>
 	</form>
-  	<div class="stylists">
-	  #if ($stylists)
-	    #foreach ($stylist in $stylists)
-		<h2><a href="/stylistClients/$stylist.getId()">Book an appointment with $stylist.getName()</a></h2>
-		<p>Current Clients include:</p>
-	    	#foreach($client in $stylist.getClients())
-	    			<li>$client.getName()</li>
-			#end
-	    #end
-		
-	  #else
-	    <p>
-	    No clients at this time
-	    </p>
-	    
-	  #end
-	</div>
+  	
 </div>
 
 
 <div class="Thank you">
-	<p><a href="/booking">Click here to see our stylists and their clients</a></p>
+	#if ($stylists)
+		<h1>Success!</h1>
+		<p>Your category has been saved.</p>
+		<a href="/booking">View Stylists</a>
+	#else
+		<p>No Stylists at this time</p>
+	#end
 </div>

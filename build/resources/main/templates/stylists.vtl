@@ -1,0 +1,17 @@
+<div class="stylists">
+  #if ($stylists)
+    #foreach ($stylist in $stylists)
+		<h2><a href="/stylistClients/$stylist.getId()">Book an appointment with $stylist.getName()</a></h2>
+		<p>Current Clients include:</p>
+    	#foreach($client in $stylist.getClients())
+    			<li>$client.getName()</li>
+		#end
+    #end
+	
+  #else
+    <p>
+    No clients at this time
+    </p>
+    
+  #end
+</div>

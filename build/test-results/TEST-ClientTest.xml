@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-09T00:04:33" hostname="Liams-MacBook-Air.local" time="0.615">
+<testsuite name="ClientTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-09T01:35:47" hostname="Liams-MacBook-Air.local" time="0.395">
   <properties/>
-  <testcase name="find_findsClientInDatabase_true" classname="ClientTest" time="0.466"/>
+  <testcase name="find_findsClientInDatabase_true" classname="ClientTest" time="0.246"/>
   <testcase name="save_savesStylistIdIntoDB_true" classname="ClientTest" time="0.052"/>
-  <testcase name="getName_returnsObjectName_String" classname="ClientTest" time="0.016"/>
-  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.024"/>
-  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.01"/>
-  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.034"/>
-  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.012"/>
+  <testcase name="getName_returnsObjectName_String" classname="ClientTest" time="0.011"/>
+  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.021"/>
+  <testcase name="client_checkInstantiatesCorrectly_True" classname="ClientTest" time="0.012"/>
+  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.037"/>
+  <testcase name="clientsAreTheSame" classname="ClientTest" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
